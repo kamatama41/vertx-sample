@@ -37,7 +37,7 @@ public class PingVerticle extends Verticle {
     vertx.eventBus().registerHandler("ping-address", new Handler<Message<String>>() {
       @Override
       public void handle(Message<String> message) {
-        message.reply("pong!");
+        message.reply("pong-------!");
         logger.info("Sent back pong");
       }
     });
