@@ -35,8 +35,8 @@ archivesBaseName = modname
 
 defaultTasks = ['assemble']
 
-sourceCompatibility = '1.7'
-targetCompatibility = '1.7'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 project.ext.moduleName = "$modowner~$modname~$version"
 
@@ -186,6 +186,7 @@ def doInit() {
       "src/main/resources\r\n" +
       "bin\r\n" +
       "out/production/${project.name}\r\n" +
+      "classses/production/${project.name}\r\n" +
       "out/test/${project.name}\r\n" +
       "build/deps\r\n";
     cpFile << defaultCp;
