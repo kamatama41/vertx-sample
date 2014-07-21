@@ -34,14 +34,10 @@ public class PingVerticle extends Verticle {
 
     final Logger logger = container.logger();
 
-    vertx.eventBus().registerHandler("ping-address", new Handler<Message<String>>() {
-      @Override
-      public void handle(Message<String> message) {
-        message.reply("pong-------!");
+    vertx.eventBus().registerHandler("ping-address", (Message<String> message) -> {
+        message.reply("pong!");
         logger.info("Sent back pong");
-      }
     });
-
 
     logger.info("PingVerticle started");
 
